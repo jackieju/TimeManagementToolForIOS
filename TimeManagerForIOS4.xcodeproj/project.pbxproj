@@ -1,0 +1,295 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5AC069EC1522A8600021B7FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AC069EB1522A8600021B7FB /* UIKit.framework */; };
+		5AC069EE1522A8600021B7FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AC069ED1522A8600021B7FB /* Foundation.framework */; };
+		5AC069F01522A8600021B7FB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AC069EF1522A8600021B7FB /* CoreGraphics.framework */; };
+		5AC069F61522A8600021B7FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5AC069F41522A8600021B7FB /* InfoPlist.strings */; };
+		5AC069F81522A8600021B7FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC069F71522A8600021B7FB /* main.m */; };
+		5AC069FC1522A8600021B7FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC069FB1522A8600021B7FB /* AppDelegate.m */; };
+		5AC069FF1522A8600021B7FB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC069FE1522A8600021B7FB /* ViewController.m */; };
+		5AC06A021522A8600021B7FB /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AC06A001522A8600021B7FB /* ViewController_iPhone.xib */; };
+		5AC06A051522A8600021B7FB /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AC06A031522A8600021B7FB /* ViewController_iPad.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5AC069E71522A8600021B7FB /* TimeManagerForIOS4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeManagerForIOS4.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AC069EB1522A8600021B7FB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5AC069ED1522A8600021B7FB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5AC069EF1522A8600021B7FB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5AC069F31522A8600021B7FB /* TimeManagerForIOS4-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TimeManagerForIOS4-Info.plist"; sourceTree = "<group>"; };
+		5AC069F51522A8600021B7FB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5AC069F71522A8600021B7FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5AC069F91522A8600021B7FB /* TimeManagerForIOS4-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TimeManagerForIOS4-Prefix.pch"; sourceTree = "<group>"; };
+		5AC069FA1522A8600021B7FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5AC069FB1522A8600021B7FB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5AC069FD1522A8600021B7FB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5AC069FE1522A8600021B7FB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5AC06A011522A8600021B7FB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		5AC06A041522A8600021B7FB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5AC069E41522A8600021B7FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AC069EC1522A8600021B7FB /* UIKit.framework in Frameworks */,
+				5AC069EE1522A8600021B7FB /* Foundation.framework in Frameworks */,
+				5AC069F01522A8600021B7FB /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5AC069DC1522A8600021B7FB = {
+			isa = PBXGroup;
+			children = (
+				5AC069F11522A8600021B7FB /* TimeManagerForIOS4 */,
+				5AC069EA1522A8600021B7FB /* Frameworks */,
+				5AC069E81522A8600021B7FB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5AC069E81522A8600021B7FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5AC069E71522A8600021B7FB /* TimeManagerForIOS4.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5AC069EA1522A8600021B7FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5AC069EB1522A8600021B7FB /* UIKit.framework */,
+				5AC069ED1522A8600021B7FB /* Foundation.framework */,
+				5AC069EF1522A8600021B7FB /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5AC069F11522A8600021B7FB /* TimeManagerForIOS4 */ = {
+			isa = PBXGroup;
+			children = (
+				5AC069FA1522A8600021B7FB /* AppDelegate.h */,
+				5AC069FB1522A8600021B7FB /* AppDelegate.m */,
+				5AC069FD1522A8600021B7FB /* ViewController.h */,
+				5AC069FE1522A8600021B7FB /* ViewController.m */,
+				5AC06A001522A8600021B7FB /* ViewController_iPhone.xib */,
+				5AC06A031522A8600021B7FB /* ViewController_iPad.xib */,
+				5AC069F21522A8600021B7FB /* Supporting Files */,
+			);
+			path = TimeManagerForIOS4;
+			sourceTree = "<group>";
+		};
+		5AC069F21522A8600021B7FB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5AC069F31522A8600021B7FB /* TimeManagerForIOS4-Info.plist */,
+				5AC069F41522A8600021B7FB /* InfoPlist.strings */,
+				5AC069F71522A8600021B7FB /* main.m */,
+				5AC069F91522A8600021B7FB /* TimeManagerForIOS4-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5AC069E61522A8600021B7FB /* TimeManagerForIOS4 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AC06A081522A8600021B7FB /* Build configuration list for PBXNativeTarget "TimeManagerForIOS4" */;
+			buildPhases = (
+				5AC069E31522A8600021B7FB /* Sources */,
+				5AC069E41522A8600021B7FB /* Frameworks */,
+				5AC069E51522A8600021B7FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TimeManagerForIOS4;
+			productName = TimeManagerForIOS4;
+			productReference = 5AC069E71522A8600021B7FB /* TimeManagerForIOS4.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5AC069DE1522A8600021B7FB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 5AC069E11522A8600021B7FB /* Build configuration list for PBXProject "TimeManagerForIOS4" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5AC069DC1522A8600021B7FB;
+			productRefGroup = 5AC069E81522A8600021B7FB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5AC069E61522A8600021B7FB /* TimeManagerForIOS4 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5AC069E51522A8600021B7FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AC069F61522A8600021B7FB /* InfoPlist.strings in Resources */,
+				5AC06A021522A8600021B7FB /* ViewController_iPhone.xib in Resources */,
+				5AC06A051522A8600021B7FB /* ViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5AC069E31522A8600021B7FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AC069F81522A8600021B7FB /* main.m in Sources */,
+				5AC069FC1522A8600021B7FB /* AppDelegate.m in Sources */,
+				5AC069FF1522A8600021B7FB /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5AC069F41522A8600021B7FB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5AC069F51522A8600021B7FB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5AC06A001522A8600021B7FB /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5AC06A011522A8600021B7FB /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		5AC06A031522A8600021B7FB /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5AC06A041522A8600021B7FB /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5AC06A061522A8600021B7FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5AC06A071522A8600021B7FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5AC06A091522A8600021B7FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TimeManagerForIOS4/TimeManagerForIOS4-Prefix.pch";
+				INFOPLIST_FILE = "TimeManagerForIOS4/TimeManagerForIOS4-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5AC06A0A1522A8600021B7FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TimeManagerForIOS4/TimeManagerForIOS4-Prefix.pch";
+				INFOPLIST_FILE = "TimeManagerForIOS4/TimeManagerForIOS4-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5AC069E11522A8600021B7FB /* Build configuration list for PBXProject "TimeManagerForIOS4" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AC06A061522A8600021B7FB /* Debug */,
+				5AC06A071522A8600021B7FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AC06A081522A8600021B7FB /* Build configuration list for PBXNativeTarget "TimeManagerForIOS4" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AC06A091522A8600021B7FB /* Debug */,
+				5AC06A0A1522A8600021B7FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5AC069DE1522A8600021B7FB /* Project object */;
+}
