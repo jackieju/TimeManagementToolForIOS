@@ -33,6 +33,9 @@ int selectedRowOfEventTable;
 @property (strong, nonatomic) IBOutlet UITextField *tfTime;
 @property (strong, nonatomic) IBOutlet UITextField *tfEvent;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *scRecordType;
+
+- (void) saveData;
+- (IBAction)onDeleteRecord:(id)sender;
 - (IBAction)onBack:(id)sender;
 - (IBAction)onBackFromRecordEditor:(id)sender;
 - (IBAction)onOKFromRecordEditor:(id)sender;

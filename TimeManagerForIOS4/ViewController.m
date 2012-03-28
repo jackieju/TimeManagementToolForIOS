@@ -171,7 +171,7 @@
     [nsdf2 setDateStyle:NSDateFormatterShortStyle];
     
     // [nsdf2 setDateFormat:@"YYYY-MM-DD HH:mm:ss:SSSS"];
-    [nsdf2 setDateFormat:@"YYYY-MM-DD HH:mm:ss"];
+    [nsdf2 setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
     NSString *t2=[nsdf2 stringFromDate:[NSDate date]];
     [self.lbTime setText:t2];
 }
@@ -191,7 +191,7 @@
     
     [nsdf2 setDateStyle:NSDateFormatterShortStyle];
     
-    [nsdf2 setDateFormat:@"YYYY-MM-DD HH:mm:ss"];
+    [nsdf2 setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
 
     NSDate* d = [nsdf2 dateFromString:v];
     
@@ -199,7 +199,7 @@
     [row setValue:tfEvent.text forKey:@"event"];
     [row setValue:d forKey:@"time"];
     [listData replaceObjectAtIndex:currentRecordRow withObject:row];
-    saveData();
+    [self saveData];
     vRecordEditor.hidden = YES;
     vHome.hidden = NO;
     [vRecordList reloadData];
@@ -264,7 +264,7 @@
             NSDateFormatter *nsdf2=[[NSDateFormatter alloc] init];
             [nsdf2 setTimeZone:[NSTimeZone timeZoneWithName:@"Asia/Shangha"]];
             [nsdf2 setDateStyle:NSDateFormatterShortStyle];
-            [nsdf2 setDateFormat:@"YYYY-MM-DD HH:mm:ss"];
+            [nsdf2 setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
             NSString *t2=[nsdf2 stringFromDate:time];
             NSLog(@"TIME %@", t2);
             cell.textLabel.text = [[NSString alloc] initWithFormat:@"%@ %@", t2, event];
@@ -348,6 +348,9 @@
 
 }
 
+- (IBAction)onDeleteRecord:(id)sender {
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //    if (game_status != 1){
@@ -376,7 +379,7 @@
             [r setValue:t  forKey:@"type"];
             [listData addObject:r];
             [vRecordList reloadData];
-            saveData();
+            [self saveData];
             vCustomEvent.hidden = YES;
             vChooseEvents.hidden = YES;
             NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[listData count] inSection:0];
@@ -395,7 +398,7 @@
         
         [nsdf2 setDateStyle:NSDateFormatterShortStyle];
         
-        [nsdf2 setDateFormat:@"YYYY-MM-DD HH:mm:ss"];
+        [nsdf2 setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
         NSString *t2=[nsdf2 stringFromDate:d];
         
         tfTime.text = t2;
