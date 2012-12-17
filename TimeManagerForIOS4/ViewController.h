@@ -7,15 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "InAppPurchaseManager.h"
 @interface ViewController : UIViewController{
 NSTimer* game_timer;
 NSMutableArray *listData;
 NSMutableArray *eventsList;
 int selectedRowOfEventTable;
     int currentRecordRow;
-
+    InAppPurchaseManager* iapm;
 }
+- (IBAction)onTouchDownRecord:(id)sender;
+@property (strong, nonatomic) IBOutlet UIImageView *ivRecordButton;
 @property (nonatomic,assign) int selectedRowOfEventTable;
 @property (nonatomic,assign) int currentRecordRow;
 @property (nonatomic, retain) NSTimer *game_timer;

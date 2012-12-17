@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A0A7D36167E611A00D3366E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A7D35167E611A00D3366E /* Default.png */; };
+		5A0A7D39167E612000D3366E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A7D38167E612000D3366E /* Default@2x.png */; };
+		5A0A7D3B167E612500D3366E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A7D3A167E612500D3366E /* Default-568h@2x.png */; };
 		5AC069EC1522A8600021B7FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AC069EB1522A8600021B7FB /* UIKit.framework */; };
 		5AC069EE1522A8600021B7FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AC069ED1522A8600021B7FB /* Foundation.framework */; };
 		5AC069F01522A8600021B7FB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AC069EF1522A8600021B7FB /* CoreGraphics.framework */; };
@@ -16,9 +19,19 @@
 		5AC069FF1522A8600021B7FB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC069FE1522A8600021B7FB /* ViewController.m */; };
 		5AC06A021522A8600021B7FB /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AC06A001522A8600021B7FB /* ViewController_iPhone.xib */; };
 		5AC06A051522A8600021B7FB /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AC06A031522A8600021B7FB /* ViewController_iPad.xib */; };
+		5AD696641592E78F000471DB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD696631592E78F000471DB /* StoreKit.framework */; };
+		5AD696681592E7C0000471DB /* InAppPurchaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD696671592E7C0000471DB /* InAppPurchaseManager.m */; };
+		5AFC4CDB167E81DB008A7F78 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AFC4CDA167E81DB008A7F78 /* button.png */; };
+		5AFC4CE0167E8361008A7F78 /* button1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AFC4CDE167E8361008A7F78 /* button1.png */; };
+		5AFC4CE1167E8361008A7F78 /* button2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AFC4CDF167E8361008A7F78 /* button2.png */; };
+		5AFC4CE4167E8E71008A7F78 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFC4CE3167E8E71008A7F78 /* CustomCell.m */; };
+		5AFC4CE8167E9410008A7F78 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AFC4CE7167E9410008A7F78 /* CustomCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A0A7D35167E611A00D3366E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		5A0A7D38167E612000D3366E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		5A0A7D3A167E612500D3366E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		5AC069E71522A8600021B7FB /* TimeManagerForIOS4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeManagerForIOS4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AC069EB1522A8600021B7FB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5AC069ED1522A8600021B7FB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -33,6 +46,15 @@
 		5AC069FE1522A8600021B7FB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5AC06A011522A8600021B7FB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		5AC06A041522A8600021B7FB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		5AD696631592E78F000471DB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		5AD696661592E7C0000471DB /* InAppPurchaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InAppPurchaseManager.h; path = TimeManagerForIOS4/InAppPurchaseManager.h; sourceTree = "<group>"; };
+		5AD696671592E7C0000471DB /* InAppPurchaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InAppPurchaseManager.m; path = TimeManagerForIOS4/InAppPurchaseManager.m; sourceTree = "<group>"; };
+		5AFC4CDA167E81DB008A7F78 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button.png; path = ../res/button.png; sourceTree = "<group>"; };
+		5AFC4CDE167E8361008A7F78 /* button1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button1.png; path = ../res/button1.png; sourceTree = "<group>"; };
+		5AFC4CDF167E8361008A7F78 /* button2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button2.png; path = ../res/button2.png; sourceTree = "<group>"; };
+		5AFC4CE2167E8E71008A7F78 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
+		5AFC4CE3167E8E71008A7F78 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
+		5AFC4CE7167E9410008A7F78 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AD696641592E78F000471DB /* StoreKit.framework in Frameworks */,
 				5AC069EC1522A8600021B7FB /* UIKit.framework in Frameworks */,
 				5AC069EE1522A8600021B7FB /* Foundation.framework in Frameworks */,
 				5AC069F01522A8600021B7FB /* CoreGraphics.framework in Frameworks */,
@@ -52,6 +75,13 @@
 		5AC069DC1522A8600021B7FB = {
 			isa = PBXGroup;
 			children = (
+				5AFC4CDD167E81ED008A7F78 /* resources */,
+				5A0A7D3A167E612500D3366E /* Default-568h@2x.png */,
+				5A0A7D38167E612000D3366E /* Default@2x.png */,
+				5A0A7D35167E611A00D3366E /* Default.png */,
+				5AD696661592E7C0000471DB /* InAppPurchaseManager.h */,
+				5AD696671592E7C0000471DB /* InAppPurchaseManager.m */,
+				5AD696631592E78F000471DB /* StoreKit.framework */,
 				5AC069F11522A8600021B7FB /* TimeManagerForIOS4 */,
 				5AC069EA1522A8600021B7FB /* Frameworks */,
 				5AC069E81522A8600021B7FB /* Products */,
@@ -86,6 +116,9 @@
 				5AC06A001522A8600021B7FB /* ViewController_iPhone.xib */,
 				5AC06A031522A8600021B7FB /* ViewController_iPad.xib */,
 				5AC069F21522A8600021B7FB /* Supporting Files */,
+				5AFC4CE2167E8E71008A7F78 /* CustomCell.h */,
+				5AFC4CE3167E8E71008A7F78 /* CustomCell.m */,
+				5AFC4CE7167E9410008A7F78 /* CustomCell.xib */,
 			);
 			path = TimeManagerForIOS4;
 			sourceTree = "<group>";
@@ -99,6 +132,16 @@
 				5AC069F91522A8600021B7FB /* TimeManagerForIOS4-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5AFC4CDD167E81ED008A7F78 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				5AFC4CDA167E81DB008A7F78 /* button.png */,
+				5AFC4CDE167E8361008A7F78 /* button1.png */,
+				5AFC4CDF167E8361008A7F78 /* button2.png */,
+			);
+			name = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +197,13 @@
 				5AC069F61522A8600021B7FB /* InfoPlist.strings in Resources */,
 				5AC06A021522A8600021B7FB /* ViewController_iPhone.xib in Resources */,
 				5AC06A051522A8600021B7FB /* ViewController_iPad.xib in Resources */,
+				5A0A7D36167E611A00D3366E /* Default.png in Resources */,
+				5A0A7D39167E612000D3366E /* Default@2x.png in Resources */,
+				5A0A7D3B167E612500D3366E /* Default-568h@2x.png in Resources */,
+				5AFC4CDB167E81DB008A7F78 /* button.png in Resources */,
+				5AFC4CE0167E8361008A7F78 /* button1.png in Resources */,
+				5AFC4CE1167E8361008A7F78 /* button2.png in Resources */,
+				5AFC4CE8167E9410008A7F78 /* CustomCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +217,8 @@
 				5AC069F81522A8600021B7FB /* main.m in Sources */,
 				5AC069FC1522A8600021B7FB /* AppDelegate.m in Sources */,
 				5AC069FF1522A8600021B7FB /* ViewController.m in Sources */,
+				5AD696681592E7C0000471DB /* InAppPurchaseManager.m in Sources */,
+				5AFC4CE4167E8E71008A7F78 /* CustomCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +340,7 @@
 				5AC06A0A1522A8600021B7FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

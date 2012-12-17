@@ -25,6 +25,10 @@
         self.viewController = [[ViewController alloc] initWithNibName:@"ViewController_iPad" bundle:nil];
     }
     self.window.rootViewController = self.viewController;
+//    iapm = [[InAppPurchaseManager alloc] init];
+//    [iapm requestProUpgradeProductData];
+//    [iapm requestProUpgradeProductData];
+    
     [self.window makeKeyAndVisible];
     return YES;
 }

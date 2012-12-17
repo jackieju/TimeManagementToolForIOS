@@ -6,6 +6,7 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 #import "ViewController.h"
+#import "CustomCell.h"
 
 @implementation ViewController
 @synthesize vRecordEditor;
@@ -23,6 +24,7 @@
 @synthesize vCustomEvent;
 @synthesize selectedRowOfEventTable;
 @synthesize currentRecordRow;
+@synthesize ivRecordButton;
 
 - (void)didReceiveMemoryWarning
 {
@@ -86,7 +88,7 @@
     [vRecordList setDelegate:self];
     [vRecordList setDataSource:self];
     [vRecordList setTag:1];
-    vRecordList.frame = CGRectMake(10, 120, 200, 300);
+    vRecordList.frame = CGRectMake(10, 120, 300, 300);
     
     game_timer = [NSTimer scheduledTimerWithTimeInterval:(1.0)target:self selector:@selector(onTimer) userInfo:nil repeats:YES];
     
@@ -111,6 +113,14 @@
     [scRecordType insertSegmentWithTitle:@"REST" atIndex:0 animated:FALSE];
     [scRecordType insertSegmentWithTitle:@"WORK" atIndex:1 animated:FALSE];
     
+//        iapm = [[InAppPurchaseManager alloc] init];
+    NSArray* ar_img = [NSArray arrayWithObjects:[UIImage imageNamed:@"button.png"],
+                    [UIImage imageNamed:@"button1.png"],
+                       [UIImage imageNamed:@"button2.png"],
+                       nil];
+    [ivRecordButton setAnimationImages:ar_img];
+    
+    
 }
 
 - (void)viewDidUnload
@@ -128,6 +138,7 @@
     [self setTfEvent:nil];
     [self setVRecordEditor:nil];
     [self setScRecordType:nil];
+    [self setIvRecordButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     
@@ -209,11 +220,16 @@
 }
 
 - (IBAction)onRecord:(id)sender {
+    [ivRecordButton setImage:[UIImage imageNamed:@"button.png"]];
+//    [self showEventView];
     //    vRecordList.hidden = YES;
-    vChooseEvents.hidden = NO;
-    
+    [self performSelector:@selector(showEventView) withObject:nil afterDelay:0.3];
+//        [iapm requestProUpgradeProductData];
 }
 
+- (void) showEventView{
+    vChooseEvents.hidden = NO;
+}
 
 // table view delegate method
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -225,35 +241,33 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
 {
+           NSUInteger row = [indexPath row];
     
-    static NSString *SimpleTableIdentifier = @"SimpleTableIdentifier";
-    
-    NSUInteger row = [indexPath row];
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
-                             SimpleTableIdentifier];
-    if (cell == nil) {
-#ifdef __IPHONE_3_0
-        // Other styles you can try
-        // UITableViewCellStyleSubtitle
-        // UITableViewCellStyleValue1
-        // UITableViewCellStyleValue2
-        
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                      reuseIdentifier: SimpleTableIdentifier] ;
-#else
-        cell = [[UITableViewCell alloc] initWithFrame::CGRectZero
-                                      reuseIdentifier: SimpleTableIdentifier] ;
-#endif
-        
-    }
-    
-    if (tableView.tag ==1 ){
-        
-        UIImage *image = [UIImage imageNamed:@"star.png"];
-        UIImage *image2 = [UIImage imageNamed:@"star2.png"];
-        cell.imageView.image = image;
-        cell.imageView.highlightedImage = image2;
+       if (tableView.tag ==1 ){
+           static BOOL nibsRegistered = NO;
+           if (!nibsRegistered) {
+               UINib *nib = [UINib nibWithNibName:@"CustomCell" bundle:nil];
+               [tableView registerNib:nib forCellReuseIdentifier:@"CustomCellIdentifier"];
+               nibsRegistered = YES;
+           }
+           CustomCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CustomCellIdentifier"];
+           
+           
+
+        UIImage *image = [UIImage imageNamed:@"button.png"];
+        UIImage *image2 = [UIImage imageNamed:@"button2.png"];
+/*        UIImageView* iv = [[UIImageView alloc] initWithFrame:CGRectMake(250, 0, 30, 30)];
+        iv.image = image;
+        cell.accessoryView = iv;
+        [cell.textLabel setContentMode:UIViewContentModeLeft];
+//        cell.imageView.frame = CGRectMake(250, 0, 50, 50) ;
+//        cell.imageView.image = image;
+//        cell.imageView.highlightedImage = image2;
         cell.textLabel.font = [UIFont systemFontOfSize:12];
+        cell.textLabel.frame = CGRectMake(0,0,200,30);
+*/
+        cell.ivImage.image = image;
+//        cell.textLabel.backgroundColor = [UIColor redColor];
         NSUInteger row = [indexPath row];
         if (row < [listData count]){
             NSDictionary *record = [listData objectAtIndex:row];
@@ -267,26 +281,68 @@
             [nsdf2 setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
             NSString *t2=[nsdf2 stringFromDate:time];
             NSLog(@"TIME %@", t2);
-            cell.textLabel.text = [[NSString alloc] initWithFormat:@"%@ %@", t2, event];
+            
+            float hour = 0;
+            if ( row > 0){
+                NSDictionary *record = [listData objectAtIndex:row-1];
+                NSDate* time2 = [record valueForKey:@"time"];
+                NSTimeInterval dd = [time timeIntervalSinceDate:time2];
+                NSLog(@"Time interval %f", dd);
+                hour = dd /3600.00;
+            }
+//            cell.textLabel.text = [[NSString alloc] initWithFormat:@"%.1fH %@ %@", hour, t2, event];
+            cell.lbEvent.text = event;
+            cell.lbTime.text = t2;
+            cell.lbDuration.text = [NSString stringWithFormat:@"%.1fH", hour ];
             if (event_type == 0){
-                [cell.textLabel setTextColor:[UIColor grayColor]];
+//                [cell.textLabel setTextColor:[UIColor grayColor]];
+                [cell.lbEvent setTextColor:[UIColor grayColor]];
             }else
-                [cell.textLabel setTextColor:[UIColor redColor]];
+//                [cell.textLabel setTextColor:[UIColor redColor]];
+                [cell.lbEvent setTextColor:[UIColor redColor]];
         }
         else{
-            cell.textLabel.text = @"  ";
+//            cell.textLabel.text = @"  ";
+            cell.lbEvent.text = @"";
+            cell.lbTime.text = @"";
+            cell.lbDuration.text = @"";
+            cell.ivImage.image = nil;
         }
         //        cell.textLabel.font = [UIFont boldSystemFontOfSize:30];
         
-        cell.textLabel.textAlignment = UITextAlignmentCenter;
+//        cell.textLabel.textAlignment = UITextAlignmentCenter;
+             return cell;
     }
-    else{
+    else  if (tableView.tag == 2){
+        static NSString *SimpleTableIdentifier = @"SimpleTableIdentifier";
+        
+        NSUInteger row = [indexPath row];
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
+                                 SimpleTableIdentifier];
+
+        if (cell == nil) {
+#ifdef __IPHONE_3_0
+            // Other styles you can try
+            // UITableViewCellStyleSubtitle
+            // UITableViewCellStyleValue1
+            // UITableViewCellStyleValue2
+            
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                          reuseIdentifier: SimpleTableIdentifier] ;
+            
+            
+#else
+            cell = [[UITableViewCell alloc] initWithFrame::CGRectZero
+                                          reuseIdentifier: SimpleTableIdentifier] ;
+#endif
+            
+        }
         UIImage *image = [UIImage imageNamed:@"star.png"];
         UIImage *image2 = [UIImage imageNamed:@"star2.png"];
         cell.imageView.image = image;
         cell.imageView.highlightedImage = image2;
         cell.textLabel.font = [UIFont systemFontOfSize:18];
-        NSUInteger row = [indexPath row];
+ 
         if (row < [eventsList count]){
             NSDictionary *record = [eventsList objectAtIndex:row];
             NSDate* time = [record valueForKey:@"time"];
@@ -300,6 +356,8 @@
             //            NSString *t2=[nsdf2 stringFromDate:time];
             //            NSLog(@"TIME %@", t2);
             cell.textLabel.text = [[NSString alloc] initWithFormat:@"%@", event];
+            
+            cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"event_%@.png", event]]];
             if (event_type == 0){
                 [cell.textLabel setTextColor:[UIColor grayColor]];
             }else
@@ -311,15 +369,11 @@
         //        cell.textLabel.font = [UIFont boldSystemFontOfSize:30];
         
         cell.textLabel.textAlignment = UITextAlignmentCenter;
+          return cell;
     }
     
-#ifdef __IPHONE_3_0    
-    if (row < 7)
-        cell.detailTextLabel.text = @"Mr. Disney";
-    else
-        cell.detailTextLabel.text = @"Mr. Tolkein";
-#endif
-    return cell;
+
+  
     
     
     
@@ -362,7 +416,7 @@
     
 
     
-    if (tableView.tag == 2){
+    if (tableView.tag == 2){ // did select on event type list
             selectedRowOfEventTable  = row;
         if ( row  == [eventsList count]){
             vCustomEvent.hidden = NO;
@@ -387,24 +441,30 @@
         }
         
         
-    }else{
-        vRecordEditor.hidden = NO;
-        currentRecordRow = row;
-        NSDictionary* o = [listData objectAtIndex:row];
-        NSDate *d = [o valueForKey:@"time"];
-        NSNumber* t = [o valueForKey:@"type"];
-        NSString* str = [o valueForKey:@"event"];
-        NSDateFormatter *nsdf2=[[NSDateFormatter alloc] init];
-        
-        [nsdf2 setDateStyle:NSDateFormatterShortStyle];
-        
-        [nsdf2 setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
-        NSString *t2=[nsdf2 stringFromDate:d];
-        
-        tfTime.text = t2;
-        tfEvent.text = str;
-        
-        [scRecordType setSelectedSegmentIndex:[t intValue]];
+    }else if (tableView.tag == 1){ // did selection on record list
+        if ( row  == [listData count]){
+            vChooseEvents.hidden = NO;
+            return;
+        }else{
+
+            vRecordEditor.hidden = NO;
+            currentRecordRow = row;
+            NSDictionary* o = [listData objectAtIndex:row];
+            NSDate *d = [o valueForKey:@"time"];
+            NSNumber* t = [o valueForKey:@"type"];
+            NSString* str = [o valueForKey:@"event"];
+            NSDateFormatter *nsdf2=[[NSDateFormatter alloc] init];
+            
+            [nsdf2 setDateStyle:NSDateFormatterShortStyle];
+            
+            [nsdf2 setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
+            NSString *t2=[nsdf2 stringFromDate:d];
+            
+            tfTime.text = t2;
+            tfEvent.text = str;
+            
+            [scRecordType setSelectedSegmentIndex:[t intValue]];
+        }
     }
     
     
@@ -451,4 +511,10 @@
     return YES;
 }
 
+- (IBAction)onTouchDownRecord:(id)sender {
+//    ivRecordButton.animationRepeatCount = 1;
+//    ivRecordButton.animationDuration = 0.3f;
+//    [ivRecordButton startAnimating];
+    [ivRecordButton setImage:[UIImage imageNamed:@"button2.png"]];
+}
 @end
