@@ -54,7 +54,7 @@
 		5A0A7D38167E612000D3366E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		5A0A7D3A167E612500D3366E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		5AA4D491168123FC00A02C7C /* new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = new.png; path = ../../../../../Downloads/new.png; sourceTree = "<group>"; };
-		5AC069E71522A8600021B7FB /* TimeManagerForIOS4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeManagerForIOS4.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AC069E71522A8600021B7FB /* TimeManagementTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeManagementTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AC069EB1522A8600021B7FB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5AC069ED1522A8600021B7FB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5AC069EF1522A8600021B7FB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -137,7 +137,7 @@
 		5AC069E81522A8600021B7FB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5AC069E71522A8600021B7FB /* TimeManagerForIOS4.app */,
+				5AC069E71522A8600021B7FB /* TimeManagementTool.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -225,7 +225,7 @@
 			);
 			name = TimeManagerForIOS4;
 			productName = TimeManagerForIOS4;
-			productReference = 5AC069E71522A8600021B7FB /* TimeManagerForIOS4.app */;
+			productReference = 5AC069E71522A8600021B7FB /* TimeManagementTool.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -390,7 +390,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TimeManagerForIOS4/TimeManagerForIOS4-Prefix.pch";
 				INFOPLIST_FILE = "TimeManagerForIOS4/TimeManagerForIOS4-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TimeManagementTool;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -403,7 +403,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TimeManagerForIOS4/TimeManagerForIOS4-Prefix.pch";
 				INFOPLIST_FILE = "TimeManagerForIOS4/TimeManagerForIOS4-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TimeManagementTool;
 				PROVISIONING_PROFILE = "28A21D9B-B2FB-4744-AC73-2866A6A97D59";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
